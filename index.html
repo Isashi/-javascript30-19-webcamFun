@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+      <button onClick="takePhoto()">Take Photo</button>
+
+      <p>Please select the filter:</p>
+      <input type="radio" id="none" name="filter" value="none" checked>
+      <label for="none">None</label><br>
+      <input type="radio" id="redFilter" name="filter" value="redFilter">
+      <label for="redFilter">redFilter</label><br>
+      <input type="radio" id="rgbSplit" name="filter" value="rgbSplit">
+      <label for="rgbSplit">rgbSplit</label><br>
+      <input type="radio" id="greenScreen" name="filter" value="greenScreen">
+      <label for="greenScreen">greenScreen</label>
+    
+      <div class="minColor">
+        <input type="color" id="minColor" name="minColor"
+               value="#FFFFFF">
+        <label for="minColor">Min Color</label>
+      </div>
+      <div class="maxColor">
+        <input type="color" id="maxColor" name="maxColor"
+               value="#FFFFFF">
+        <label for="maxColor">Min Color</label>
+      </div>
+    </div>
+
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+    <canvas class="bgVideo" style="visibility: hidden"></canvas>
+  </div>
+
+  <audio class="snap" src="./snap.mp3" hidden></audio>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
